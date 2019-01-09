@@ -4,24 +4,34 @@
 <head> 
     <meta charset="utf-8">
     <title>My Profile</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <style>
         body {
-            height: 10%;
-            width: 100%;
             background-color: #4a525a;
+        }
+        .split {
+            height: 10%;
+            width: 150%;
+            /* position: center; */
+            /* z-index: 1; */
+            /* top: 0; */
+            /* overflow-x: hidden; */
+            padding-top: 20px;
+            /* display: block;
+            margin-left: auto;
+            margin-right: auto; */
+            padding-left: 250px;
         }
         .profile {
             border-radius: 60%;
             transform: rotate(-90deg);
-            margin-top: 5%;
-            margin-left: 17%;
+            margin-top: -5%;
+            /* margin-bottom: 0% */
+            /* padding-left: 160px; */
+            margin-left: 20%;
         }
         .contact {
             padding-left: 500px;
-            margin-top: -8%;
+            margin-top: -5%;
             color: white;
         }
         .data {
@@ -31,65 +41,68 @@
         .tagsize {
             border-radius: 100%;
             color: red;
+            padding
             
         }
-        .pad {
-            padding-left: 20%;
+        .career {
+            /* float: left; */
+            height: -50px;
+            width: 57%;
+            margin-left: 250px;
+            color: white;
+            background-color: #4a525a;
+            font-family: arial;
+            text-decoration: underline;
         }
-        .pa {
-            padding-left: 1%;
+        .text {
+            margin-left: 250px;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
         }
-      
     </style>
 </head>
 <body>
     
-    <div class="container-fluid">
-            <div>
-                    <img src="20181207_105746.jpg" alt="profile photo" height="190" width="180" class="profile">
-                    <div class="contact">
-                        <h2>Ramu Ummadishetty</h2>
-                        <ul>
-                            <div class="data">
-                            <a class="data" href="https://goo.gl/maps/YiyDRNK2g432"><img src="map.jpg" alt="map tag" height="30" width="30" class="tagsize">IIIT hyderabad,Gachibowli,Telangana</a>
-                            <div><a class="data" href="https://mail.google.com"><img src="mail.jpg" alt="map tag" height="30" width="30" class="tagsize">ummadishettyramu@msitprogram.net</a></div>
-                            </div>
-                        </ul>
-                    </div>
-            
-                </div>
-                <div class="pad" style="color:black"><h2>Career Objective</h2>
-                </div>
-                <ul>
-                    <div class="pad" style="color: white"><p>A highly organized and hard-working individual looking for a responsible position to gain practical experience.</p></div>
-                </ul>
-                <div class="pad" style="color: black"><h2>Education Qualification</h2>
-                </div>
-                <ul>
-                    <div class="pad" style="color: white"><p>Masters of Sciences in Information Technology <span>from International Institute of Information Technology, Hyderabad</span>.</p>
-                        <p>B.TECH from St.Marys Engineering college</p>
-                    </div>
-                    
-                </ul>
-        <div class="row pa">
-            <div class="career col-sm-5 pad" style="color: black"><h2>Projects</h2>
-                <ul>
-                        <div class="pad" style="color: white"><li>Pedal Switching System using Arduino.</li>
-                            <li>Designing a web page For Music Band</li>
-                        </div>
-                    </ul>
-            </div>
-            <div class="career col-sm-5 pad" style="color: black"><h2>Technical Skills</h2>
-                <ul>
-                        <div class="pad" style="color: white"><li>Programming Languages: Java, Python.</li>
-                            <li>Scripting languages: Javascript,HTML5,CSS</li>
-                            <li>Database: POSTGRESQL</li>
-                        </div>
-                    </ul>
-            </div>
-        </div>
+    <!-- <h1>Ramu Ummadishetty</h1> -->
+
+    <div class="split">
+        <img src="just-live-facebook-cover.jpg" alt="cover photo">
     </div>
-    <!-- <div class="career"><h2>Technical Skills</h2>
+    <div>
+        <img src="20181207_105746.jpg" alt="profile photo" height="190" width="180" class="profile">
+        <div class="contact">
+            <h2>Ramu Ummadishetty</h2>
+            <ul>
+                <div class="data">
+                <a class="data" href="https://goo.gl/maps/YiyDRNK2g432"><img src="map.jpg" alt="map tag" height="30" width="30" class="tagsize">IIT hyderabad,Gachibowli,Telangana</a>
+                <div><a class="data" href="https://mail.google.com"><img src="mail.jpg" alt="map tag" height="30" width="30" class="tagsize">ummadishettyramu@msitprogram.net</a></div>
+                </div>
+            </ul>
+        </div>
+
+    </div>
+    <div class="career"><h2>Career Objective</h2>
+    </div>
+    <ul>
+        <div class="text"><p>A highly organized and hard-working individual looking for a responsible position to gain practical experience.</p></div>
+    </ul>
+    <div class="career"><h2>Education Qualification</h2>
+    </div>
+    <ul>
+        <div class="text"><p>Masters of Sciences in Information Technology <span>from International Institute of Information Technology, Hyderabad</span>.</p>
+            <p>B.TECH from St.Marys Engineering college</p>
+        </div>
+        
+    </ul>
+    <div class="career"><h2>Projects</h2>
+    </div>
+    <ul>
+        <div class="text"><p>Pedal Switching System using Arduino.</p>
+            <p>Designing a web page For Music Band</p>
+        </div>
+        
+    </ul>
+    <div class="career"><h2>Technical Skills</h2>
     </div>
     <ul>
         <div class="text"><p>Programming Languages: Java, Python</p>
@@ -97,7 +110,7 @@
             <p>Database: POSTGRESQL</p>
         </div>
         
-    </ul> -->
+    </ul>
 
     <!-- </div> -->
     
