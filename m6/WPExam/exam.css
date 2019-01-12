@@ -1,0 +1,99 @@
+
+* {
+  box-sizing: border-box;
+}
+
+/* Add a gray background color with some padding */
+body {
+  font-family: Arial;
+  padding: 10px;
+  background-color: #4a525a;
+}
+/* Create two unequal columns that floats next to each other */
+/* Left column */
+.leftcolumn {   
+  float: left;
+  width: 15%;
+}
+
+/* Right column */
+.rightcolumn {
+  float: left;
+  width: 85%;
+  padding-left: 20px;
+}
+
+/* Fake image */
+.fakeimg {
+  background-color: #4a525a;
+  width: 100%;
+  padding: 20px;
+}
+.pic {
+    border-radius: 50%;
+    width: 100%;
+    padding: 10px;
+    border: green;
+}
+
+/* Add a card effect for articles */
+.card {
+  background-color: #4a525a;
+   padding: 20px;
+   margin-top: 20px;
+   color: white;
+   border: 5px solid green;
+
+}
+.cardd {
+  float:left;
+  width: 30%;
+  color: #4a525a;
+  background-color: #4a525a;
+   /* padding: 20px; */
+   border: 5px solid green;
+   margin-top: 20px;
+   margin-right: 20px;
+   /* margin-left: 25px; */
+   margin-bottom: 25px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+hr { 
+  display: block;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  margin-left: auto;
+  margin-right: auto;
+  /* border-style: inset; */
+  border-width: 1px;
+}
+.columnn {
+  float: left;
+  width: 25%;
+  padding: 20px;
+  /* height: 300px; Should be removed. Only for demonstration */
+}
+.bottom-right {
+  position: absolute;
+  bottom: 8px;
+  right: 16px;
+}
+.container {
+  position: relative;
+  text-align: center;
+  color: black;
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+  .leftcolumn, .rightcolumn {   
+    width: 50%;
+    padding: 0;
+  }
+}

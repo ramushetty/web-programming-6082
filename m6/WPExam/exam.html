@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+* {
+  box-sizing: border-box;
+}
+
+/* Add a gray background color with some padding */
+body {
+  font-family: Arial;
+  padding: 10px;
+  background-color: #4a525a;
+}
+/* Create two unequal columns that floats next to each other */
+/* Left column */
+.leftcolumn {   
+  float: left;
+  width: 15%;
+}
+
+/* Right column */
+.rightcolumn {
+  float: left;
+  width: 85%;
+  padding-left: 20px;
+}
+
+/* Fake image */
+.fakeimg {
+  background-color: #4a525a;
+  width: 100%;
+  padding: 20px;
+}
+.pic {
+    border-radius: 50%;
+    width: 100%;
+    padding: 10px;
+    border: green;
+}
+
+/* Add a card effect for articles */
+.card {
+  background-color: #4a525a;
+   padding: 20px;
+   margin-top: 20px;
+   color: white;
+   border: 5px solid green;
+
+}
+.cardd {
+  float:left;
+  width: 30%;
+  color: #4a525a;
+  background-color: #4a525a;
+   /* padding: 20px; */
+   border: 5px solid green;
+   margin-top: 20px;
+   margin-right: 20px;
+   /* margin-left: 25px; */
+   margin-bottom: 25px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+hr { 
+  display: block;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  margin-left: auto;
+  margin-right: auto;
+  /* border-style: inset; */
+  border-width: 1px;
+}
+.columnn {
+  float: left;
+  width: 25%;
+  padding: 20px;
+  /* height: 300px; Should be removed. Only for demonstration */
+}
+.bottom-right {
+  position: absolute;
+  bottom: 8px;
+  right: 16px;
+}
+.container {
+  position: relative;
+  text-align: center;
+  color: black;
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+  .leftcolumn, .rightcolumn {   
+    width: 50%;
+    padding: 0;
+  }
+}
+</style>
+</head>
+<body>
+
+<div class="row">
+  <div class="leftcolumn">
+    <div class="card">
+          <div>
+        <img src="boy.jpg" alt="imaaage" class="pic">
+      </div>
+      <h2>Ramu Ummadishetty</h2>
+    </div>
+    <div class="card">
+      <h3>THINGS TO KNOW ABOUT ME!</h3>
+        <ul> 
+          <li>6.2 feet Tall</li>
+          <li>Studying in IIIT Hyderabad</li>
+          <li>I am from Hyderabad</li>
+          <li>Interested In Cyber Security</li>
+          <li>Love to ride bike</li>
+
+        </ul>
+    </div>
+  </div>
+  <div class="rightcolumn">
+    <div >
+     <center class="heading" style="color: white"><h2>My journey So Far...</h2></center>
+     <hr>
+     <div class="cardd" style="background-color:white;">
+        <div class="container">
+        <img src="cspp.jpg" height="80" width="368">
+        <div class="bottom-right">CSPP</div>
+        </div>
+        <ul>
+          <li>My first programming language</li>
+          <li>learned Python and java Programming</li>
+          <li>Enjoyed projects</li>
+          <li>Confussed but learned something</li>
+          <li>good to start with Python Language</li>
+
+
+        </ul>
+      </div>
+      <div class="cardd" style="background-color:white;">
+          <div class="container">
+            
+          <img src="dsa.png" height="80" width="368">
+          <div class="bottom-right">ADS</div>
+          </div>
+          <ul>
+              <li>There are two parts in this ADS-1 and ADS-2</li>
+              <li>In ADS-1 learned Data Structures</li>
+              <li>In ADS-2 learned Dynamic Programming</li>
+              <li>Tough courses</li>
+              <li>ADS-1 exams are little bit tough</li>
+
+
+    
+            </ul>
+       
+      </div>
+        <div class="cardd" style="background-color:white;">
+            <div class="container">
+
+            <img src="dbms.png" height="80" width="368">
+            <!-- <p>Some text..</p> -->
+            <div class="bottom-right">DBMS</div>
+          </div>
+          <ul>
+              <li>Data base Management systems</li>
+              <li>learned how data is stored in database</li>
+              <li>learned query language</li>
+              <li>used postgresql</li>
+              <li>easy course</li>
+
+    
+            </ul>
+          </div>
+          <div class="cardd" style="background-color:white;">
+              <div class="container">
+
+              <img src="ics.jpg" height="80" width="368">
+              <div class="bottom-right">ICS</div>
+            </div>
+            <ul>
+                <li>ICS</li>
+                <li>tough course</li>
+                <li>not yet learned</li>
+                <li>basic knowledge of C programming is needed</li>
+                <li>basic layer of programming</li>
+
+      
+              </ul>
+            </div>
+            <div class="cardd" style="background-color:white;">
+                <div class="container">
+
+                <img src="cnf.jpg" height="80" width="368">
+                <div class="bottom-right">CNF</div>
+          </div>
+          <ul>
+              <li>Computer network fundamentals</li>
+              <li>learned how networks works</li>
+              <li>covered interesting topics</li>
+              <li>enjoyed socket programming</li>
+              <li>confused with threadding concepts</li>
+
+    
+            </ul>
+              </div>
+              <div class="cardd" style="background-color:white;">
+              <div class="container">
+
+                  <img src="cybersecurity.png" height="80" width="368">
+                  <div class="bottom-right">Cyber security</div>
+          </div>
+          <ul>
+              <li>cyber security</li>
+              <li>easy course</li>
+              <li>lot to learn covered only some topics</li>
+              <li>Interesting topics</li>
+              <li>need to have more practice</li>
+    
+            </ul>
+                </div>
+          </div>
+    </div>
+    
+
+  </div>
+</div>
+
+</body>
+</html>
