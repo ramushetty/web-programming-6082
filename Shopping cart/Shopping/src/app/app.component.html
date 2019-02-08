@@ -1,0 +1,120 @@
+<div class = "container-fluid">
+    <div class="row" style="background-color: darkblue;">
+     <div class="col-sm-2 padding h">
+       <nav>
+         <a routerLink="/home" class="font">
+          Shopping Stop
+         </a>
+       </nav>
+     </div>
+     <div style="text-align: center"class="col-sm-4">
+         <form class="example">
+           <input class="search" type="text" placeholder="Search.." [(ngModel)]="search" name="search2">
+           <button type="submit" class="searchbutton" routerLink="productlist/{{search}}"><i class="fa fa-search"></i></button>
+         </form>
+     </div>
+     
+       <div class="col-sm-3"></div>
+       <div class="col-sm-1 padding h">
+         <nav>
+           <a routerLink="/cart" class="font">
+              <p class="glyphicon glyphicon-shopping-cart">Cart</p>
+           </a>
+         </nav>
+         
+       </div>
+       <div class="col-sm-1 padding h">
+         <nav>
+           <!-- <a routerLink="/login" class="font"> -->
+              <a class="font">
+
+             <!-- Login -->
+             <button id="loghide" class="butto" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
+
+              <div id="id01" class="modal">
+                
+                <form ngNativeValidate class="modal-content animate">
+                  <!-- <div class="imgcontainer">
+                    <img src="img_avatar2.png" alt="Avatar" class="avatar">
+                  </div> -->
+                  <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+
+                  <div class="container com">
+                    <label class="coll" for="uname"><b>Username</b></label>
+                    <input class="inpu" type="text" placeholder="Enter Username" [(ngModel)]="username" name="uname" required>
+
+                    <label class="coll" for="psw"><b>Password</b></label>
+                    <input class="inpu" type="password" placeholder="Enter Password" [(ngModel)]="password" name="psw" required>
+                      
+                    <button class="but"  type="submit" (click)="validateUser()">Login</button>
+                    <label class="coll" for="psw"><b>{{create}}</b></label>
+
+                    <label class="coll">
+                      <input  class="inpu" type="checkbox" checked="checked" name="remember"> Remember me
+                    </label>
+                    <div>
+                      <!-- <button class="butto"  type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button> -->
+                      <span class="psw coll">Forgot <a href="#">password?</a></span>
+                      <button class="butto" (click)="fun1()">Click HERE</button>
+                      <!-- <a> -->
+                          <!-- <div class="g-signin2" data-onsuccess="onSignIn" dark-theme="dark"> -->
+                            <!-- </div> -->
+                      <!-- </a> -->
+                      <button (click)="socialSignIn('google')">Sign in with Google</button>  
+                      <!-- <div class="data coll">
+                        <p class="coll" id="email"></p>
+                        <button (click)="onSignIn()">googlesignin</button>
+
+                      </div> -->
+                      
+                    </div>
+                  </div>
+                </form>
+              </div>
+           </a>
+         </nav>
+         </div>
+         <div id="reghide" class="col-sm-1 padding h">
+           <nav>
+             <!-- <a routerLink="/logreg" class="font">
+               Register
+             </a> -->
+             <div class="dropdown">
+              <button routerLink="/logreg" class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Register
+              <span class="caret"></span></button>
+              <ul class="dropdown-menu">
+                <li><a href="#">ramu</a></li>
+                <li><a href="#">nehru</a></li>
+                <li><a href="#">john</a></li>
+              </ul>
+            </div>
+           </nav>
+           </div>
+           <div id="name" class="col-sm-1 padding h">
+
+                  <p class="font">
+                    Welcome {{username}}
+                  </p>
+
+            </div>
+
+    </div>
+  </div>
+  <script>
+    function fun1(){
+      console.log(354643565);
+    }
+    function onSignIn(googleUser) {
+      alert("ramu");
+      var profile = googleUser.getBasicProfile();
+      console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
+      console.log('Name: ' + profile.getName());
+      console.log('Image URL: ' + profile.getImageUrl());
+      console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
+      alert(profile.getId())
+    }
+        
+  </script>
+<!-- <button (click)="go()">Hall</button> -->
+<router-outlet></router-outlet>
+

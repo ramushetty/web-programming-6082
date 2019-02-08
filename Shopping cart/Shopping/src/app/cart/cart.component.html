@@ -1,0 +1,40 @@
+<div class="row">
+    <div class="col-md-10">
+        <h2>Here's your Cart</h2>
+    </div>
+    <div class="col-md-2"><br>
+        <nav>
+            <a routerLink="/login">
+                <button class="btn btn-primary" (click)="confrmCart()">Check Out</button>
+            </a>
+        </nav>
+    </div>
+</div>
+<hr>
+<h4>My Cart({{ind.length}})</h4>
+<div class="eachitem" *ngFor="let x of ind"><br>
+    <div class="row" *ngIf="x.quantity > 0">
+
+            <div class="col-sm-3">
+                <img class="img" src={{cart[x.ind].image}} alt="Image-Cart">
+                <br>
+                
+        </div>
+        <div class="col-sm-9">
+            <h3>{{cart[x.ind].title}}</h3>
+            <p>{{cart[x.ind].description}}</p>
+            <h4>₹{{cart[x.ind].price}}</h4>
+            <button class="btn btn-info btn-sm" (click)="x.quantity=x.quantity-1">
+                    <span class="glyphicon glyphicon-minus"></span>
+            </button>
+            <input type="text" [(ngModel)]="x.quantity" size="1" readonly>
+            <button class="btn btn-info btn-sm" (click)="x.quantity=x.quantity+1">
+                    <span class="glyphicon glyphicon-plus"></span>
+            </button>
+        </div>
+    </div> <br>   
+</div>
+
+<div>
+    <p>{{totalprice}}</p>
+</div>

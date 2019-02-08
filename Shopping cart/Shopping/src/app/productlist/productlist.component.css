@@ -1,0 +1,22 @@
+
+.image {
+    height: 300px;
+    width: 150px;
+    text-align: center;
+}
+.title {
+    color: blueviolet;
+    font-size: 25px;
+}
+.price {
+    font-size: 20px;
+    color: blue;
+}
+.description {
+    font-size: 15px;
+    color: blue;
+}
+.margin {
+    border-bottom: 2px solid black;
+    margin-bottom: 20px;
+}

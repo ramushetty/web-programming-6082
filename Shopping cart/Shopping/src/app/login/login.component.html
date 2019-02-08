@@ -1,0 +1,75 @@
+<div class="container" style="background-color:white;">
+<h2>My Cart</h2>
+  <hr>
+  <div class="row">
+  <div class="col-md-7">
+    <div class="panel panel-default" *ngFor="let x of finalCart; index as i">
+    <div class="panel-body hov">
+      <div class="row">
+        <div class="col-md-8">
+          <p>Product: {{cart[x.ind].title}}</p>
+          <p>Quantity x {{x.quantity}}</p>
+        </div>
+        <div class="col-md-4" style="text-align:right;">
+            <!-- <button class="btn btn-warning">Delete</button> -->
+            <button type="button" class="btn btn-warning btn-sm" (click)="remove(finalCart, i)">
+              <span class="glyphicon glyphicon-trash"></span> Remove 
+            </button>
+          </div>
+      </div>
+    </div>
+  </div>
+  <h2>Details</h2>
+  <form>
+    <div class="form-group">
+        <div class="form-group">
+            <label for="name">Username:</label>
+            <input type="Username" class="form-control hov" id="name" placeholder="Enter Username" name="name">
+          </div>
+      <label for="email">Email:</label>
+      <input type="email" class="form-control hov" id="email" placeholder="Enter email" name="email">
+    </div>
+    <div class="form-group">
+      <label for="address">Address:</label>
+      <input type="Address" class="form-control hov" id="address" placeholder="Enter Address" name="address">
+    </div>
+    <div class="form-group">
+      <input type="Address" class="form-control hov" id="address" [(ngModel)]="promo" placeholder="Appply Promocode" name="address">
+      <button (click)="checkPromo()">Apply</button>
+    </div>
+    <div *ngIf="promdiv" class="alert alert-success">
+      <div>Yay! You got the Cashback..!</div>
+    </div>
+    <div style="text-align: center;">
+    <a routerLink="/home" class="btn btn-warning">
+      <span class="glyphicon glyphicon-chevron-left"></span> Continue Shopping
+    </a>&nbsp;
+    <button class="btn btn-warning" (click)="cartfUpdate()">
+      Place order<span class="glyphicon glyphicon-chevron-right"></span> 
+    </button>
+  </div><br><br>
+  </form>
+  </div>
+  <div class="col-md-5">
+    <div class="panel panel-default">
+    <div class="panel-body">
+    <p style="font-size: 20px;">Price Details</p>
+    <hr>
+    <div class=row>
+    <div class="col-md-7">
+    <p>Total Items</p>
+    </div>
+    <div class="col-md-5" style="text-align: end">{{totalQuant}}</div>
+    </div>
+    <hr>
+    <div class=row>
+        <div class="col-md-7">
+        <p>Total Price</p>
+        </div>
+        <div class="col-md-5" style="text-align: end">{{totalprice}}</div>
+        </div>
+    </div>
+  </div>
+</div>
+</div>
+</div>

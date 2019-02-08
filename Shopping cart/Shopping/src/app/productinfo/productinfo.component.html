@@ -1,0 +1,74 @@
+<br>
+<div class="container" style="background-color: white">
+  <div class="row" style="text-align: center;"><br><br>
+    <!-- <div class="col-md-12"></div> -->
+    <div class="col-md-5">
+      <!-- <p>{{product}}</p> -->
+      <img class="img" src={{product.image}}>
+      <br><br>
+      <div class="row">   
+        <!-- <nav>
+          <a routerLink="/cart"> -->
+            <p class="btn btn-primary" (click)="addtocart()">
+                <span class="glyphicon glyphicon-shopping-cart">&nbsp;</span>Add to Cart</p>
+          <!-- </a>
+        </nav>     -->
+      </div>
+    </div>
+    <div class="col-md-7">
+      <p class="name">{{product.title}}</p><br>
+      <p class="name">{{product.description}}</p>
+      <p class="price">{{product.price}}<span><i class="fa fa-inr"></i></span></p>
+      
+      <p class="description">A 20 MP + 2 MP dual front camera, a long-lasting battery and 15.9 cm (6.26-inch) screen - there is so much to love about the Redmi Note 6 Pro. With a truckload of impressive features like the quad camera system, AI scene detection and 19:9 FHD+ Full Screen Display, this phone is designed to impress.</p>
+      <hr>
+      <form>
+        <div class="form-group">
+            <div class="form-group">
+                <label for="name">Enter Your Name:</label>
+                <input type="Username" class="form-control hov" id="name" [(ngModel)]="revName" placeholder="Enter Username" name="name">
+              </div>
+          <label for="review">Enter Your Review:</label>
+          <textarea class="form-control hov" rows="3" id="review" [(ngModel)]="review" placeholder="Enter your Review.." name="review"></textarea>
+        </div>
+        <button (click)='addReview()'>Submit</button>
+      </form>
+    </div>
+  </div><br><br>
+</div>
+  <br><br>
+  <div class="container" style="background-color: white">
+      <div class="row">
+        <br>
+          <div class="col-sm-3" *ngFor="let i of [1,2,3,4]">
+              <img src="https://rukminim1.flixcart.com/image/416/416/jog2nbk0/mobile/q/z/h/mi-redmi-e7t-na-original-imafazxgdvdcnygz.jpeg?q=70" style="height:150px; width:100px;">
+          </div>
+          <!-- <div class="col-sm-3">
+              <img src="https://rukminim1.flixcart.com/image/832/832/josxlzk0/mobile/g/p/z/mi-redmi-note-6-pro-mzb6876in-original-imafb6ggkruc4cxp.jpeg?q=70" style="height:150px; width:200px;">
+          </div>
+          <div class="col-sm-3">
+              <img src="https://rukminim1.flixcart.com/image/832/832/josxlzk0/mobile/g/p/z/mi-redmi-note-6-pro-mzb6876in-original-imafb6ggkruc4cxp.jpeg?q=70" style="height:150px; width:200px;">
+          </div>
+          <div class="col-sm-3">
+              <img src="https://rukminim1.flixcart.com/image/832/832/josxlzk0/mobile/g/p/z/mi-redmi-note-6-pro-mzb6876in-original-imafb6ggkruc4cxp.jpeg?q=70" style="height:150px; width:200px;">
+          </div> -->
+      </div>
+      </div><br><br>
+    <div class="container" style="background-color: lightyellow"><br>
+      <h2 style="color:red">Reviews</h2>
+      <!-- <div class="panel panel-default" *ngIf="reviews.length === 0">
+          <div class="panel-body">
+            <h5>No Reviews...</h5>
+            <h4>Be the first to review</h4>
+          </div>
+        </div> -->
+      <div class="panel panel-default" *ngFor="let x of reviews">
+        <div class="panel-body">
+          <h5>{{x.revName}}</h5>
+          <h4>{{x.review}}</h4>
+        </div>
+      </div>
+    </div>
+      
+    
+  
