@@ -1,0 +1,26 @@
+<div class="container" style="background-color:white"><br>
+  <div class="margin" *ngFor="let i of names | filter : ser">
+    <div class="row">
+      <nav>
+        <a routerLink="productinfo/{{i}}">
+          {{i}}
+        </a>
+      </nav>
+
+      {{x}}
+      <div class="col-md-4" style="text-align: center;">
+        <img class="image" src= {{data[i].image}}>
+      </div>
+      <div class="col-md-8">
+        <p class="title">{{data[i].title}}</p>
+        <p class="description">{{data[i].description}}</p>
+        <p class="price">₹{{data[i].price}}</p><br>
+        <nav>
+          <a routerLink="/productinfo/{{i}}">
+            <button>More Info</button>
+          </a>
+        </nav>
+      </div>
+    </div><br>
+  </div>
+  </div>
