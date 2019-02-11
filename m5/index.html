@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Quiz</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link href="css/bootstrap.icon-large.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/solid.css" integrity="sha384-+0VIRx+yz1WBcCTXBkVQYIBVNEFH1eP6Zknm16roZCyeNg2maWEpk/l/KsyFKs7G" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/regular.css" integrity="sha384-aubIA90W7NxJ+Ly4QHAqo1JBSwQ0jejV75iHhj59KRwVjLVHjuhS3LkDAoa/ltO4" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/brands.css" integrity="sha384-1KLgFVb/gHrlDGLFPgMbeedi6tQBLcWvyNUN+YKXbD7ZFbjX6BLpMDf0PJ32XJfX" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/fontawesome.css" integrity="sha384-jLuaxTTBR42U2qJ/pm4JRouHkEDHkVqH0T1nyQXn1mZ7Snycpf6Rl25VBNthU4z0" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+  
+
+</head>
+<body>
+
+  <div id="myNav" class="overlay">
+    <div class="overlay-content">
+      <a  onclick="cnav()">START QUIZ</a>
+    </div>
+  </div>
+  <nav id="navbar" class="navbar navbar-dark bg-primary">
+    <p id = "nav">LEARN BY DOING</p>
+  </nav>
+  <div class="container-fluid" id="main">    
+    
+  </div>
+  <div><p id = "reset" onclick="reloadPage()">RESET THIS PAGE</p></div>
+  <script>
+    window.onload = onav();
+    function onav() {
+      document.getElementById("myNav").style.width = "100%";
+    }
+    function cnav() {
+      document.getElementById("myNav").style.width = "0%";
+    }
+  </script>
+  <script type="text/javascript" src="script.js"></script>
+</body>
+</html>
